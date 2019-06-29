@@ -13,5 +13,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "longest_subarray_with_distinct_values.cc",
                          "longest_subarray_with_distinct_values.tsv",
                          &LongestSubarrayWithDistinctEntries,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

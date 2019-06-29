@@ -6,7 +6,7 @@
 #include "test_framework/timed_executor.h"
 using std::unique_ptr;
 
-BinaryTreeNode<int>* LCA(const unique_ptr<BinaryTreeNode<int>>& node0,
+BinaryTreeNode<int>* Lca(const unique_ptr<BinaryTreeNode<int>>& node0,
                          const unique_ptr<BinaryTreeNode<int>>& node1) {
   // TODO - you fill in here.
   return nullptr;
@@ -17,7 +17,7 @@ int LcaWrapper(TimedExecutor& executor,
   const unique_ptr<BinaryTreeNode<int>>& node0 = MustFindNode(tree, key0);
   const unique_ptr<BinaryTreeNode<int>>& node1 = MustFindNode(tree, key1);
 
-  auto result = executor.Run([&] { return LCA(node0, node1); });
+  auto result = executor.Run([&] { return Lca(node0, node1); });
 
   if (!result) {
     throw TestFailure("Result can not be nullptr");
@@ -30,5 +30,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "tree", "key0", "key1"};
   return GenericTestMain(args, "lowest_common_ancestor_close_ancestor.cc",
                          "lowest_common_ancestor.tsv", &LcaWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

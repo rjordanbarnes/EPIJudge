@@ -44,5 +44,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "num_nodes"};
   return GenericTestMain(args, "enumerate_trees.cc", "enumerate_trees.tsv",
                          &GenerateAllBinaryTreesWrapper, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

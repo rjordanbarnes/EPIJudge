@@ -12,5 +12,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A", "k"};
   return GenericTestMain(
       args, "search_unknown_length_array.cc", "search_unknown_length_array.tsv",
-      &BinarySearchUnknownLength, DefaultComparator{}, param_names);
+      &BinarySearchUnknownLength, DefaultComparator{}, param_names, nullptr);
 }

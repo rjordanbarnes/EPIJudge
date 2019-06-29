@@ -41,5 +41,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"preorder_sequence"};
   return GenericTestMain(args, "bst_from_preorder.cc", "bst_from_preorder.tsv",
                          &RebuildBSTFromPreorder, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

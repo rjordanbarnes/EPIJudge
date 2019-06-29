@@ -14,5 +14,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "kth_largest_element_in_two_sorted_arrays.cc",
                          "kth_largest_element_in_two_sorted_arrays.tsv",
                          &FindKthInTwoSortedArrays, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

@@ -49,5 +49,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "num_rings"};
   return GenericTestMain(args, "hanoi.cc", "hanoi.tsv",
                          &ComputeTowerHanoiWrapper, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

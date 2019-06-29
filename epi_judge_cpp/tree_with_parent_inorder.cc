@@ -13,5 +13,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"tree"};
   return GenericTestMain(args, "tree_with_parent_inorder.cc",
                          "tree_with_parent_inorder.tsv", &InorderTraversal,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

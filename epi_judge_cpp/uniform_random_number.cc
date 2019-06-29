@@ -21,6 +21,7 @@ int UniformRandom(int lower_bound, int upper_bound) {
 }
 bool UniformRandomRunner(TimedExecutor& executor, int lower_bound,
                          int upper_bound) {
+  using namespace test_framework;
   vector<int> result;
   executor.Run([&] {
     std::generate_n(back_inserter(result), 100000,
@@ -46,5 +47,5 @@ int main(int argc, char* argv[]) {
                                        "upper_bound"};
   return GenericTestMain(args, "uniform_random_number.cc",
                          "uniform_random_number.tsv", &UniformRandomWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

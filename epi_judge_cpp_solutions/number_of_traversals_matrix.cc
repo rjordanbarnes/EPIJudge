@@ -32,22 +32,23 @@ int ComputeNumberOfWaysToXY(int x, int y,
   return number_of_ways[x][y];
 }
 
-int ComputeNumberOfWaysSpaceEfficient(int n, int m) {
+int NumberOfWaysSpaceEfficient(int n, int m) {
   if (n < m) {
     swap(n, m);
   }
-  vector<int> A(m, 1);
+
+  vector<int> table(m, 1);
   for (int i = 1; i < n; ++i) {
     int prev_res = 0;
     if (n < m) {
       swap(n, m);
     }
     for (int j = 0; j < m; ++j) {
-      A[j] = A[j] + prev_res;
-      prev_res = A[j];
+      table[j] = table[j] + prev_res;
+      prev_res = table[j];
     }
   }
-  return A[m - 1];
+  return table[m - 1];
 }
 
 int main(int argc, char* argv[]) {
@@ -55,5 +56,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"n", "m"};
   return GenericTestMain(args, "number_of_traversals_matrix.cc",
                          "number_of_traversals_matrix.tsv", &NumberOfWays,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

@@ -19,9 +19,12 @@ void EliminateDuplicate(vector<Name>* names) {
   // TODO - you fill in here.
   return;
 }
+
+namespace test_framework {
 template <>
-struct SerializationTraits<Name>
-    : UserSerTraits<Name, std::string, std::string> {};
+struct SerializationTrait<Name> : UserSerTrait<Name, std::string, std::string> {
+};
+}  // namespace test_framework
 
 std::ostream& operator<<(std::ostream& out, const Name& n) {
   return out << n.first_name;
@@ -44,5 +47,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"names"};
   return GenericTestMain(args, "remove_duplicates.cc", "remove_duplicates.tsv",
-                         &EliminateDuplicateWrapper, &Comp, param_names);
+                         &EliminateDuplicateWrapper, &Comp, param_names,
+                         nullptr);
 }

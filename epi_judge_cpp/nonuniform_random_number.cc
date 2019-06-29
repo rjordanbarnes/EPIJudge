@@ -59,5 +59,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "nonuniform_random_number.cc",
                          "nonuniform_random_number.tsv",
                          &NonuniformRandomNumberGenerationWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

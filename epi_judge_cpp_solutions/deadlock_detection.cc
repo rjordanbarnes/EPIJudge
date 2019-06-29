@@ -44,8 +44,10 @@ struct Edge {
   int to;
 };
 
+namespace test_framework {
 template <>
-struct SerializationTraits<Edge> : UserSerTraits<Edge, int, int> {};
+struct SerializationTrait<Edge> : UserSerTrait<Edge, int, int> {};
+}  // namespace test_framework
 
 bool HasCycleWrapper(TimedExecutor& executor, int num_nodes,
                      const vector<Edge>& edges) {
@@ -74,5 +76,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "num_nodes", "edges"};
   return GenericTestMain(args, "deadlock_detection.cc",
                          "deadlock_detection.tsv", &HasCycleWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

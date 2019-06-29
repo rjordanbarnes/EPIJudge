@@ -91,5 +91,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"digits", "target"};
   return GenericTestMain(args, "insert_operators_in_string.cc",
                          "insert_operators_in_string.tsv", &ExpressionSynthesis,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

@@ -52,5 +52,5 @@ int main(int argc, char *argv[]) {
   std::vector<std::string> param_names{"A"};
   return GenericTestMain(args, "element_appearing_once.cc",
                          "element_appearing_once.tsv", &FindElementAppearsOnce,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

@@ -31,5 +31,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A"};
   return GenericTestMain(
       args, "max_product_all_but_one.cc", "max_product_all_but_one.tsv",
-      &FindBiggestNMinusOneProduct, DefaultComparator{}, param_names);
+      &FindBiggestNMinusOneProduct, DefaultComparator{}, param_names, nullptr);
 }

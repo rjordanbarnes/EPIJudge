@@ -11,9 +11,12 @@ DuplicateAndMissing FindDuplicateMissing(const vector<int>& A) {
   // TODO - you fill in here.
   return {0, 0};
 }
+
+namespace test_framework {
 template <>
-struct SerializationTraits<DuplicateAndMissing>
-    : UserSerTraits<DuplicateAndMissing, int, int> {};
+struct SerializationTrait<DuplicateAndMissing>
+    : UserSerTrait<DuplicateAndMissing, int, int> {};
+}  // namespace test_framework
 
 bool operator==(const DuplicateAndMissing& lhs,
                 const DuplicateAndMissing& rhs) {
@@ -30,5 +33,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A"};
   return GenericTestMain(
       args, "search_for_missing_element.cc", "find_missing_and_duplicate.tsv",
-      &FindDuplicateMissing, DefaultComparator{}, param_names);
+      &FindDuplicateMissing, DefaultComparator{}, param_names, nullptr);
 }

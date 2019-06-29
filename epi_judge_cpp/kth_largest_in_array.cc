@@ -18,5 +18,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"k", "A"};
   return GenericTestMain(args, "kth_largest_in_array.cc",
                          "kth_largest_in_array.tsv", &FindKthLargestWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

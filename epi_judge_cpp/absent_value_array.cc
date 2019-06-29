@@ -23,5 +23,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"stream"};
   return GenericTestMain(args, "absent_value_array.cc",
                          "absent_value_array.tsv", &FindMissingElementWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

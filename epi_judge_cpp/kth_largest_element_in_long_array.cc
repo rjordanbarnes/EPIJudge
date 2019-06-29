@@ -18,5 +18,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "kth_largest_element_in_long_array.cc",
                          "kth_largest_element_in_long_array.tsv",
                          &FindKthLargestUnknownLengthWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

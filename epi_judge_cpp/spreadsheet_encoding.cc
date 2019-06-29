@@ -12,5 +12,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"col"};
   return GenericTestMain(args, "spreadsheet_encoding.cc",
                          "spreadsheet_encoding.tsv", &SSDecodeColID,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

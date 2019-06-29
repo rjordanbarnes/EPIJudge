@@ -14,6 +14,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"square_matrix"};
   return GenericTestMain(args, "matrix_rotation.cc", "matrix_rotation.tsv",
-                         &RotateMatrixWrapper, DefaultComparator{},
-                         param_names);
+                         &RotateMatrixWrapper, DefaultComparator{}, param_names,
+                         nullptr);
 }

@@ -15,13 +15,13 @@ unique_ptr<BstNode<int>> BuildMinHeightBSTFromSortedArray(
 }
 int BuildMinHeightBSTFromSortedArrayWrapper(TimedExecutor& executor,
                                             const vector<int>& A) {
-  unique_ptr<BstNode<int>> result =
+  auto result =
       executor.Run([&] { return BuildMinHeightBSTFromSortedArray(A); });
 
-  if (GenerateInorder(result) != A) {
+  if (test_framework::GenerateInorder(result) != A) {
     throw TestFailure("Result binary tree mismatches input array");
   }
-  return BinaryTreeHeight(result);
+  return test_framework::BinaryTreeHeight(result);
 }
 
 int main(int argc, char* argv[]) {
@@ -30,5 +30,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "bst_from_sorted_array.cc",
                          "bst_from_sorted_array.tsv",
                          &BuildMinHeightBSTFromSortedArrayWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

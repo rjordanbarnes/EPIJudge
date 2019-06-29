@@ -13,5 +13,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "maximum_subarray_in_circular_array.cc",
                          "maximum_subarray_in_circular_array.tsv",
                          &MaxSubarraySumInCircular, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

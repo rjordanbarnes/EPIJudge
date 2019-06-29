@@ -11,7 +11,7 @@ using std::swap;
 
 int GetDepth(const BinaryTreeNode<int>*);
 
-BinaryTreeNode<int>* LCA(const unique_ptr<BinaryTreeNode<int>>& node0,
+BinaryTreeNode<int>* Lca(const unique_ptr<BinaryTreeNode<int>>& node0,
                          const unique_ptr<BinaryTreeNode<int>>& node1) {
   BinaryTreeNode<int>*iter0 = node0.get(), *iter1 = node1.get();
   int depth0 = GetDepth(iter0), depth1 = GetDepth(iter1);
@@ -46,7 +46,7 @@ int LcaWrapper(TimedExecutor& executor,
   const unique_ptr<BinaryTreeNode<int>>& node0 = MustFindNode(tree, key0);
   const unique_ptr<BinaryTreeNode<int>>& node1 = MustFindNode(tree, key1);
 
-  auto result = executor.Run([&] { return LCA(node0, node1); });
+  auto result = executor.Run([&] { return Lca(node0, node1); });
 
   if (!result) {
     throw TestFailure("Result can not be nullptr");
@@ -59,5 +59,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "tree", "key0", "key1"};
   return GenericTestMain(args, "lowest_common_ancestor_with_parent.cc",
                          "lowest_common_ancestor.tsv", &LcaWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

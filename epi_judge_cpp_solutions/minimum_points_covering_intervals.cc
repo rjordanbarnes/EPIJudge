@@ -31,13 +31,16 @@ int FindMinimumVisits(vector<Interval> intervals) {
   return num_visits;
 }
 
+namespace test_framework {
 template <>
-struct SerializationTraits<Interval> : UserSerTraits<Interval, int, int> {};
+struct SerializationTrait<Interval> : UserSerTrait<Interval, int, int> {};
+}  // namespace test_framework
 
 int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"intervals"};
   return GenericTestMain(args, "minimum_points_covering_intervals.cc",
                          "minimum_points_covering_intervals.tsv",
-                         &FindMinimumVisits, DefaultComparator{}, param_names);
+                         &FindMinimumVisits, DefaultComparator{}, param_names,
+                         nullptr);
 }

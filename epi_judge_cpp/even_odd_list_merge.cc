@@ -10,5 +10,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"L"};
   return GenericTestMain(args, "even_odd_list_merge.cc",
                          "even_odd_list_merge.tsv", &EvenOddMerge,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

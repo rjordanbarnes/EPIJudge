@@ -40,8 +40,9 @@ void RangeLookupInBSTHelper(const unique_ptr<BstNode<int>>& tree,
   }
 }
 
+namespace test_framework {
 template <>
-struct SerializationTraits<Interval> : UserSerTraits<Interval, int, int> {
+struct SerializationTrait<Interval> : UserSerTrait<Interval, int, int> {
   static std::vector<std::string> GetMetricNames(const std::string& arg_name) {
     return {FmtStr("length({})", arg_name)};
   }
@@ -50,11 +51,12 @@ struct SerializationTraits<Interval> : UserSerTraits<Interval, int, int> {
     return {x.right - x.left};
   }
 };
+}  // namespace test_framework
 
 int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"tree", "interval"};
   return GenericTestMain(args, "range_lookup_in_bst.cc",
                          "range_lookup_in_bst.tsv", &RangeLookupInBST,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

@@ -56,9 +56,11 @@ struct SerializedNode {
   int jump_index;
 };
 
+namespace test_framework {
 template <>
-struct SerializationTraits<SerializedNode>
-    : UserSerTraits<SerializedNode, int, int> {};
+struct SerializationTrait<SerializedNode>
+    : UserSerTrait<SerializedNode, int, int> {};
+}  // namespace test_framework
 
 PostingListPtr CreatePostingList(
     const std::vector<SerializedNode>& serialized) {
@@ -129,5 +131,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "l"};
   return GenericTestMain(args, "copy_posting_list.cc", "copy_posting_list.tsv",
                          &CopyPostingsListWrapper, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

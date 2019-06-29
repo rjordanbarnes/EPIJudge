@@ -12,5 +12,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"s"};
   return GenericTestMain(args, "is_string_permutable_to_palindrome.cc",
                          "is_string_permutable_to_palindrome.tsv",
-                         &CanFormPalindrome, DefaultComparator{}, param_names);
+                         &CanFormPalindrome, DefaultComparator{}, param_names,
+                         nullptr);
 }

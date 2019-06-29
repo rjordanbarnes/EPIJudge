@@ -11,5 +11,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"heights"};
   return GenericTestMain(args, "max_trapped_water.cc", "max_trapped_water.tsv",
-                         &GetMaxTrappedWater, DefaultComparator{}, param_names);
+                         &GetMaxTrappedWater, DefaultComparator{}, param_names,
+                         nullptr);
 }

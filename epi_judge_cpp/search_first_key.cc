@@ -11,5 +11,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"A", "k"};
   return GenericTestMain(args, "search_first_key.cc", "search_first_key.tsv",
-                         &SearchFirstOfK, DefaultComparator{}, param_names);
+                         &SearchFirstOfK, DefaultComparator{}, param_names,
+                         nullptr);
 }

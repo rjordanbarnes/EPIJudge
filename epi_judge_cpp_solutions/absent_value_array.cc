@@ -22,7 +22,7 @@ int FindMissingElement(vector<int>::const_iterator stream_begin,
 
   // Look for a bucket that contains less than (1 << 16) elements.
   const int kBucketCapacity = 1 << 16;
-  int candidate_bucket;
+  int candidate_bucket = 0;
   for (int i = 0; i < kNumBucket; ++i) {
     if (counter[i] < kBucketCapacity) {
       candidate_bucket = i;
@@ -66,5 +66,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"stream"};
   return GenericTestMain(args, "absent_value_array.cc",
                          "absent_value_array.tsv", &FindMissingElementWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

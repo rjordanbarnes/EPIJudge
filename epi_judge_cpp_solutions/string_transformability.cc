@@ -48,5 +48,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"D", "s", "t"};
   return GenericTestMain(args, "string_transformability.cc",
                          "string_transformability.tsv", &TransformString,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

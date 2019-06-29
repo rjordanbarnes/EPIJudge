@@ -12,6 +12,7 @@ void RandomSampling(int k, vector<int>* A_ptr) {
   return;
 }
 bool RandomSamplingRunner(TimedExecutor& executor, int k, vector<int> A) {
+  using namespace test_framework;
   vector<vector<int>> results;
 
   executor.Run([&] {
@@ -49,5 +50,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "k", "A"};
   return GenericTestMain(args, "offline_sampling.cc", "offline_sampling.tsv",
                          &RandomSamplingWrapper, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

@@ -4,12 +4,12 @@
 #include <vector>
 
 #include "list_node.h"
-#define main _main
-#include "sorted_lists_merge.cc"  // uses AppendNode()
-#undef main
 #include "test_framework/generic_test.h"
 #include "test_framework/test_failure.h"
 #include "test_framework/timed_executor.h"
+#define main _main
+#include "sorted_lists_merge.cc"  // uses AppendNode()
+#undef main
 
 using std::shared_ptr;
 
@@ -85,6 +85,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"executor", "l", "x"};
   return GenericTestMain(args, "pivot_list.cc", "pivot_list.tsv",
-                         &ListPivotingWrapper, DefaultComparator{},
-                         param_names);
+                         &ListPivotingWrapper, DefaultComparator{}, param_names,
+                         nullptr);
 }

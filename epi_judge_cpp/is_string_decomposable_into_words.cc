@@ -43,5 +43,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "is_string_decomposable_into_words.cc",
                          "is_string_decomposable_into_words.tsv",
                          &DecomposeIntoDictionaryWordsWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

@@ -11,5 +11,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"n"};
   return GenericTestMain(args, "prime_sieve.cc", "prime_sieve.tsv",
-                         &GeneratePrimes, DefaultComparator{}, param_names);
+                         &GeneratePrimes, DefaultComparator{}, param_names,
+                         nullptr);
 }

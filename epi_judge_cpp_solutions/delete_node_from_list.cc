@@ -28,5 +28,5 @@ int main(int argc, char* argv[]) {
                                        "node_to_delete_idx"};
   return GenericTestMain(args, "delete_node_from_list.cc",
                          "delete_node_from_list.tsv", &DeletionFromListWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

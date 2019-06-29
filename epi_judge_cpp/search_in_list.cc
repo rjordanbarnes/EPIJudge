@@ -16,5 +16,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"L", "key"};
   return GenericTestMain(args, "search_in_list.cc", "search_in_list.tsv",
-                         &SearchListWrapper, DefaultComparator{}, param_names);
+                         &SearchListWrapper, DefaultComparator{}, param_names,
+                         nullptr);
 }

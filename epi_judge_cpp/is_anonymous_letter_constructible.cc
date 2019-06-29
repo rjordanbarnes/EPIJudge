@@ -14,5 +14,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "is_anonymous_letter_constructible.cc",
                          "is_anonymous_letter_constructible.tsv",
                          &IsLetterConstructibleFromMagazine,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

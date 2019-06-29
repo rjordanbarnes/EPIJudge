@@ -13,5 +13,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "smallest_nonconstructible_value.cc",
                          "smallest_nonconstructible_value.tsv",
                          &SmallestNonconstructibleValue, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

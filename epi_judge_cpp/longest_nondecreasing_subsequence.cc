@@ -13,5 +13,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "longest_nondecreasing_subsequence.cc",
                          "longest_nondecreasing_subsequence.tsv",
                          &LongestNondecreasingSubsequenceLength,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

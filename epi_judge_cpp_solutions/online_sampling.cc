@@ -45,6 +45,7 @@ vector<int> OnlineRandomSample(vector<int>::const_iterator stream_begin,
 
 bool OnlineRandomSamplingRunner(TimedExecutor& executor, vector<int> stream,
                                 int k) {
+  using namespace test_framework;
   vector<vector<int>> results;
 
   executor.Run([&] {
@@ -82,5 +83,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "stream", "k"};
   return GenericTestMain(args, "online_sampling.cc", "online_sampling.tsv",
                          &OnlineRandomSampleWrapper, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

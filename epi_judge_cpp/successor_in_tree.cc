@@ -18,5 +18,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"tree", "node_idx"};
   return GenericTestMain(args, "successor_in_tree.cc", "successor_in_tree.tsv",
                          &FindSuccessorWrapper, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

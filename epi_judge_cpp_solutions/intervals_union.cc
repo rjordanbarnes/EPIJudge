@@ -80,9 +80,11 @@ struct FlatInterval {
   }
 };
 
+namespace test_framework {
 template <>
-struct SerializationTraits<FlatInterval>
-    : UserSerTraits<FlatInterval, int, bool, int, bool> {};
+struct SerializationTrait<FlatInterval>
+    : UserSerTrait<FlatInterval, int, bool, int, bool> {};
+}  // namespace test_framework
 
 std::ostream& operator<<(std::ostream& out, const FlatInterval& i) {
   return out << (i.left_is_closed ? '<' : '(') << i.left_val << ", "
@@ -107,5 +109,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "intervals"};
   return GenericTestMain(args, "intervals_union.cc", "intervals_union.tsv",
                          &UnionOfIntervalsWrapper, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

@@ -49,8 +49,10 @@ void GroupByAge(vector<Person>* people) {
   }
 }
 
+namespace test_framework {
 template <>
-struct SerializationTraits<Person> : UserSerTraits<Person, int, string> {};
+struct SerializationTrait<Person> : UserSerTrait<Person, int, string> {};
+}  // namespace test_framework
 
 void GroupByAgeWrapper(TimedExecutor& executor, vector<Person>& people) {
   if (people.empty()) {
@@ -66,10 +68,11 @@ void GroupByAgeWrapper(TimedExecutor& executor, vector<Person>& people) {
   if (people.empty()) {
     throw TestFailure("Empty result");
   }
+
   std::set<int> ages;
   int last_age = people[0].age;
   for (auto& x : people) {
-    if (ages.count(x.age) != 0) {
+    if (ages.count(x.age)) {
       throw TestFailure("Entries are not grouped by age");
     }
     if (x.age != last_age) {
@@ -89,5 +92,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "people"};
   return GenericTestMain(args, "group_equal_entries.cc",
                          "group_equal_entries.tsv", &GroupByAgeWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

@@ -21,5 +21,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"x"};
   return GenericTestMain(args, "closest_int_same_weight.cc",
                          "closest_int_same_weight.tsv", &ClosestIntSameBitCount,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

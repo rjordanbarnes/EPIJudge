@@ -59,8 +59,10 @@ bool CheckFeasibleHelper(const vector<Jug>& jugs, int L, int H,
   return false;
 }
 
+namespace test_framework {
 template <>
-struct SerializationTraits<Jug> : UserSerTraits<Jug, int, int> {};
+struct SerializationTrait<Jug> : UserSerTrait<Jug, int, int> {};
+}  // namespace test_framework
 
 bool operator==(const Jug& lhs, const Jug& rhs) {
   return lhs.low == rhs.low && lhs.high == rhs.high;
@@ -70,5 +72,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"jugs", "L", "H"};
   return GenericTestMain(args, "defective_jugs.cc", "defective_jugs.tsv",
-                         &CheckFeasible, DefaultComparator{}, param_names);
+                         &CheckFeasible, DefaultComparator{}, param_names,
+                         nullptr);
 }

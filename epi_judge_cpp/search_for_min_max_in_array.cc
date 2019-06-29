@@ -10,8 +10,10 @@ MinMax FindMinMax(const vector<int>& A) {
   // TODO - you fill in here.
   return {0, 0};
 }
+namespace test_framework {
 template <>
-struct SerializationTraits<MinMax> : UserSerTraits<MinMax, int, int> {};
+struct SerializationTrait<MinMax> : UserSerTrait<MinMax, int, int> {};
+}  // namespace test_framework
 
 bool operator==(const MinMax& lhs, const MinMax& rhs) {
   return std::tie(lhs.smallest, lhs.largest) ==
@@ -27,5 +29,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A"};
   return GenericTestMain(args, "search_for_min_max_in_array.cc",
                          "search_for_min_max_in_array.tsv", &FindMinMax,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

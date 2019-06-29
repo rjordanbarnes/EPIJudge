@@ -50,5 +50,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "smallest_subarray_covering_all_values.cc",
                          "smallest_subarray_covering_all_values.tsv",
                          &FindSmallestSequentiallyCoveringSubsetWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

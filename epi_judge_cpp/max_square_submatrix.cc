@@ -14,5 +14,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A"};
   return GenericTestMain(args, "max_square_submatrix.cc",
                          "max_square_submatrix.tsv", &MaxSquareSubmatrix,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

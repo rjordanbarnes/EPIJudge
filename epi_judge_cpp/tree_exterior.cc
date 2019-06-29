@@ -34,5 +34,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "tree"};
   return GenericTestMain(args, "tree_exterior.cc", "tree_exterior.tsv",
                          &ExteriorBinaryTreeWrapper, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

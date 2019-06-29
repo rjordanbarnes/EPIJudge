@@ -43,6 +43,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"sequence"};
   return GenericTestMain(args, "online_median.cc", "online_median.tsv",
-                         &OnlineMedianWrapper, DefaultComparator{},
-                         param_names);
+                         &OnlineMedianWrapper, DefaultComparator{}, param_names,
+                         nullptr);
 }

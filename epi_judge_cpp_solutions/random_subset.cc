@@ -51,6 +51,7 @@ vector<int> RandomSubset(int n, int k) {
 }
 
 bool RandomSubsetRunner(TimedExecutor& executor, int n, int k) {
+  using namespace test_framework;
   vector<vector<int>> results;
 
   executor.Run([&] {
@@ -84,6 +85,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"executor", "n", "k"};
   return GenericTestMain(args, "random_subset.cc", "random_subset.tsv",
-                         &RandomSubsetWrapper, DefaultComparator{},
-                         param_names);
+                         &RandomSubsetWrapper, DefaultComparator{}, param_names,
+                         nullptr);
 }

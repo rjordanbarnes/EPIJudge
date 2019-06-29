@@ -11,5 +11,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"max_advance_steps"};
   return GenericTestMain(args, "advance_by_offsets.cc",
                          "advance_by_offsets.tsv", &CanReachEnd,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

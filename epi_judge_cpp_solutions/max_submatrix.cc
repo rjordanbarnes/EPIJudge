@@ -50,5 +50,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A"};
   return GenericTestMain(args, "max_submatrix.cc", "max_submatrix.tsv",
                          &MaxRectangleSubmatrix, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

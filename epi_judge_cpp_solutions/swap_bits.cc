@@ -16,5 +16,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"x", "i", "j"};
   return GenericTestMain(args, "swap_bits.cc", "swap_bits.tsv", &SwapBits,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

@@ -23,5 +23,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A"};
   return GenericTestMain(args, "int_as_array_increment.cc",
                          "int_as_array_increment.tsv", &PlusOne,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

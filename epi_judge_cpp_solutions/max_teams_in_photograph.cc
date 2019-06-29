@@ -46,8 +46,10 @@ struct Edge {
   int to;
 };
 
+namespace test_framework {
 template <>
-struct SerializationTraits<Edge> : UserSerTraits<Edge, int, int> {};
+struct SerializationTrait<Edge> : UserSerTrait<Edge, int, int> {};
+}  // namespace test_framework
 
 int FindLargestNumberTeamsWrapper(TimedExecutor& executor, int k,
                                   const vector<Edge>& edges) {
@@ -70,7 +72,8 @@ int FindLargestNumberTeamsWrapper(TimedExecutor& executor, int k,
 int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"executor", "k", "edges"};
-  return GenericTestMain(
-      args, "max_teams_in_photograph.cc", "max_teams_in_photograph.tsv",
-      &FindLargestNumberTeamsWrapper, DefaultComparator{}, param_names);
+  return GenericTestMain(args, "max_teams_in_photograph.cc",
+                         "max_teams_in_photograph.tsv",
+                         &FindLargestNumberTeamsWrapper, DefaultComparator{},
+                         param_names, nullptr);
 }

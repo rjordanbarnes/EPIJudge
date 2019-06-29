@@ -33,8 +33,7 @@ GraphVertex* CloneGraph(GraphVertex* graph) {
     q.pop();
     for (GraphVertex* e : v->edges) {
       // Try to copy vertex e.
-      if (!vertex_map.count(e)) {
-        vertex_map.emplace(e, new GraphVertex({e->label}));
+      if (vertex_map.emplace(e, new GraphVertex({e->label})).second) {
         q.emplace(e);
       }
       // Copy edge.
@@ -74,8 +73,7 @@ void CheckGraph(GraphVertex* node, const vector<GraphVertex>& graph) {
       throw TestFailure("Edges mismatch");
     }
     for (GraphVertex* e : vertex->edges) {
-      if (!vertex_set.count(e)) {
-        vertex_set.emplace(e);
+      if (vertex_set.emplace(e).second) {
         q.emplace(e);
       }
     }
@@ -90,8 +88,10 @@ struct Edge {
   int to;
 };
 
+namespace test_framework {
 template <>
-struct SerializationTraits<Edge> : UserSerTraits<Edge, int, int> {};
+struct SerializationTrait<Edge> : UserSerTrait<Edge, int, int> {};
+}  // namespace test_framework
 
 void CloneGraphTest(int k, const vector<Edge>& edges) {
   vector<GraphVertex> graph;
@@ -118,5 +118,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"k", "edges"};
   return GenericTestMain(args, "graph_clone.cc", "graph_clone.tsv",
-                         &CloneGraphTest, DefaultComparator{}, param_names);
+                         &CloneGraphTest, DefaultComparator{}, param_names,
+                         nullptr);
 }

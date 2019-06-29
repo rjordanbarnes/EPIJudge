@@ -11,5 +11,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"sorted_arrays"};
   return GenericTestMain(args, "sorted_arrays_merge.cc",
                          "sorted_arrays_merge.tsv", &MergeSortedArrays,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

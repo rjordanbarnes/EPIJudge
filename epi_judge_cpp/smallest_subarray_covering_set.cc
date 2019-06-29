@@ -47,5 +47,5 @@ int main(int argc, char *argv[]) {
   return GenericTestMain(args, "smallest_subarray_covering_set.cc",
                          "smallest_subarray_covering_set.tsv",
                          &FindSmallestSubarrayCoveringSetWrapper,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

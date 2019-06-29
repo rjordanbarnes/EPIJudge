@@ -41,5 +41,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "board"};
   return GenericTestMain(
       args, "matrix_enclosed_regions.cc", "matrix_enclosed_regions.tsv",
-      &FillSurroundedRegionsWrapper, DefaultComparator{}, param_names);
+      &FillSurroundedRegionsWrapper, DefaultComparator{}, param_names, nullptr);
 }

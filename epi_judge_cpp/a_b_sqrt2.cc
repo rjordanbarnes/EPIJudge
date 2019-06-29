@@ -11,5 +11,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"k"};
   return GenericTestMain(args, "a_b_sqrt2.cc", "a_b_sqrt2.tsv",
                          &GenerateFirstKABSqrt2, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

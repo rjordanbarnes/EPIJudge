@@ -14,5 +14,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A", "B"};
   return GenericTestMain(args, "levenshtein_distance.cc",
                          "levenshtein_distance.tsv", &LevenshteinDistance,
-                         DefaultComparator{}, param_names);
+                         DefaultComparator{}, param_names, nullptr);
 }

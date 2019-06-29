@@ -42,5 +42,5 @@ int main(int argc, char *argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"t", "s"};
   return GenericTestMain(args, "substring_match.cc", "substring_match.tsv",
-                         &RabinKarp, DefaultComparator{}, param_names);
+                         &RabinKarp, DefaultComparator{}, param_names, nullptr);
 }

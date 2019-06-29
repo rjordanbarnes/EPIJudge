@@ -13,5 +13,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "longest_subarray_with_sum_constraint.cc",
                          "longest_subarray_with_sum_constraint.tsv",
                          &FindLongestSubarrayLessEqualK, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

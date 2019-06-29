@@ -19,5 +19,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "search_first_greater_value_in_bst.cc",
                          "search_first_greater_value_in_bst.tsv",
                          &FindFirstGreaterThanKWrapper, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

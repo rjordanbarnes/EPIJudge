@@ -18,5 +18,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"stream"};
   return GenericTestMain(args, "majority_element.cc", "majority_element.tsv",
                          &MajoritySearchWrapper, DefaultComparator{},
-                         param_names);
+                         param_names, nullptr);
 }

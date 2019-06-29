@@ -22,9 +22,11 @@ vector<Star> FindClosestKStars(vector<Star>::const_iterator stars_begin,
   // TODO - you fill in here.
   return {};
 }
+
+namespace test_framework {
 template <>
-struct SerializationTraits<Star> : UserSerTraits<Star, double, double, double> {
-};
+struct SerializationTrait<Star> : UserSerTrait<Star, double, double, double> {};
+}  // namespace test_framework
 
 std::ostream& operator<<(std::ostream& out, const Star& s) {
   return out << s.Distance();
@@ -53,5 +55,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"stars", "k"};
   return GenericTestMain(args, "k_closest_stars.cc", "k_closest_stars.tsv",
-                         &FindClosestKStarsWrapper, &Comp, param_names);
+                         &FindClosestKStarsWrapper, &Comp, param_names,
+                         nullptr);
 }

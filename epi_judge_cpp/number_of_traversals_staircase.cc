@@ -10,5 +10,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"top", "maximum_step"};
   return GenericTestMain(args, "number_of_traversals_staircase.cc",
                          "number_of_traversals_staircase.tsv",
-                         &NumberOfWaysToTop, DefaultComparator{}, param_names);
+                         &NumberOfWaysToTop, DefaultComparator{}, param_names,
+                         nullptr);
 }

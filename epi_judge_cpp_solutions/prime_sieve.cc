@@ -15,6 +15,8 @@ vector<int> GeneratePrimes(int n) {
   vector<int> primes;
   primes.emplace_back(2);
   // is_prime[i] represents whether (2i + 3) is prime or not.
+  // For example, is_prime[0] represents 3 is prime or not, is_prime[1]
+  // represents 5, is_prime[2] represents 7, etc.
   // Initially, set each to true. Then use sieving to eliminate nonprimes.
   deque<bool> is_prime(size, true);
   for (int i = 0; i < size; ++i) {
@@ -37,5 +39,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"n"};
   return GenericTestMain(args, "prime_sieve.cc", "prime_sieve.tsv",
-                         &GeneratePrimes, DefaultComparator{}, param_names);
+                         &GeneratePrimes, DefaultComparator{}, param_names,
+                         nullptr);
 }
