@@ -12,5 +12,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"service_times"};
   return GenericTestMain(args, "minimum_waiting_time.cc",
                          "minimum_waiting_time.tsv", &MinimumTotalWaitingTime,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

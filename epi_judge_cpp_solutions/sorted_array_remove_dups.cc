@@ -34,6 +34,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args {argv + 1, argv + argc};
   std::vector<std::string> param_names {"executor", "A"};
   return GenericTestMain(args, "sorted_array_remove_dups.cc", "sorted_array_remove_dups.tsv", &DeleteDuplicatesWrapper, 
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }
 // clang-format on

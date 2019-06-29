@@ -15,5 +15,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "enumerate_balanced_parentheses.cc",
                          "enumerate_balanced_parentheses.tsv",
                          &GenerateBalancedParentheses, UnorderedComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

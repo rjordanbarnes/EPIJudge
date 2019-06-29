@@ -43,6 +43,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"square_matrix"};
   return GenericTestMain(args, "spiral_ordering.cc", "spiral_ordering.tsv",
-                         &MatrixInSpiralOrder, DefaultComparator{}, param_names,
-                         nullptr);
+                         &MatrixInSpiralOrder, DefaultComparator{},
+                         param_names);
 }

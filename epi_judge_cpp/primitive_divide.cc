@@ -8,5 +8,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"x", "y"};
   return GenericTestMain(args, "primitive_divide.cc", "primitive_divide.tsv",
-                         &Divide, DefaultComparator{}, param_names, nullptr);
+                         &Divide, DefaultComparator{}, param_names);
 }

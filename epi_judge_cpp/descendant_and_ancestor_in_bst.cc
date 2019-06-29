@@ -32,5 +32,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "descendant_and_ancestor_in_bst.cc",
                          "descendant_and_ancestor_in_bst.tsv",
                          &PairIncludesAncestorAndDescendantOfMWrapper,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

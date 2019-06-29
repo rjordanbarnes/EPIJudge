@@ -47,6 +47,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args {argv + 1, argv + argc};
   std::vector<std::string> param_names {"A", "k"};
   return GenericTestMain(args, "k_largest_in_heap.cc", "k_largest_in_heap.tsv", &KLargestInBinaryHeap, 
-                         UnorderedComparator{}, param_names, nullptr);
+                         UnorderedComparator{}, param_names);
 }
 // clang-format on

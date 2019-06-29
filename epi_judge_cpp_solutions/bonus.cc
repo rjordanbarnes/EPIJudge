@@ -46,5 +46,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"productivity"};
   return GenericTestMain(args, "bonus.cc", "bonus.tsv", &CalculateBonus,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

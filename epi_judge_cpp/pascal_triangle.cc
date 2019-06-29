@@ -11,5 +11,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"num_rows"};
   return GenericTestMain(args, "pascal_triangle.cc", "pascal_triangle.tsv",
                          &GeneratePascalTriangle, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

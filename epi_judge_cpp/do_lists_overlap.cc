@@ -88,5 +88,5 @@ int main(int argc, char* argv[]) {
                                        "common",   "cycle0", "cycle1"};
   return GenericTestMain(args, "do_lists_overlap.cc", "do_lists_overlap.tsv",
                          &OverlappingListsWrapper, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

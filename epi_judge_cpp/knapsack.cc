@@ -21,5 +21,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"items", "capacity"};
   return GenericTestMain(args, "knapsack.cc", "knapsack.tsv",
                          &OptimumSubjectToCapacity, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

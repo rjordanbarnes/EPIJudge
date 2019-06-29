@@ -17,5 +17,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"s"};
   return GenericTestMain(args, "is_string_palindromic.cc",
                          "is_string_palindromic.tsv", &IsPalindromic,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

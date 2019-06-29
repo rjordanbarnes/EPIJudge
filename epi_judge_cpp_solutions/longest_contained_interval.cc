@@ -41,5 +41,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A"};
   return GenericTestMain(
       args, "longest_contained_interval.cc", "longest_contained_interval.tsv",
-      &LongestContainedRange, DefaultComparator{}, param_names, nullptr);
+      &LongestContainedRange, DefaultComparator{}, param_names);
 }

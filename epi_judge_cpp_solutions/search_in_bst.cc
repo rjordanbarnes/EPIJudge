@@ -23,6 +23,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"tree", "key"};
   return GenericTestMain(args, "search_in_bst.cc", "search_in_bst.tsv",
-                         &SearchBSTWrapper, DefaultComparator{}, param_names,
-                         nullptr);
+                         &SearchBSTWrapper, DefaultComparator{}, param_names);
 }

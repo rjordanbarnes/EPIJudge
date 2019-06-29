@@ -34,7 +34,7 @@ TestResult GenericTestMain(
     const std::string& test_file, const std::string& test_data_file,
     Function test_func, Comparator comparator,
     const std::vector<std::string>& param_names,
-    const std::function<void(TestConfig&)>& program_config) {
+    const std::function<void(TestConfig&)>& program_config = {}) {
   std::ifstream config_data(GetFilePathInJudgeDir("config.json"));
   json config_override;
   config_data >> config_override;

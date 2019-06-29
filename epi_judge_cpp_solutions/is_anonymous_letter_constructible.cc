@@ -40,6 +40,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args {argv + 1, argv + argc};
   std::vector<std::string> param_names {"letter_text", "magazine_text"};
   return GenericTestMain(args, "is_anonymous_letter_constructible.cc", "is_anonymous_letter_constructible.tsv", &IsLetterConstructibleFromMagazine, 
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }
 // clang-format on

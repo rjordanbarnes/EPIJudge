@@ -30,5 +30,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "bst_from_sorted_array.cc",
                          "bst_from_sorted_array.tsv",
                          &BuildMinHeightBSTFromSortedArrayWrapper,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

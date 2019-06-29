@@ -97,6 +97,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"executor", "head", "cycle_idx"};
   return GenericTestMain(args, "is_list_cyclic.cc", "is_list_cyclic.tsv",
-                         &HasCycleWrapper, DefaultComparator{}, param_names,
-                         nullptr);
+                         &HasCycleWrapper, DefaultComparator{}, param_names);
 }

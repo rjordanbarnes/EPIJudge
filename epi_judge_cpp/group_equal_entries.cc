@@ -62,5 +62,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "people"};
   return GenericTestMain(args, "group_equal_entries.cc",
                          "group_equal_entries.tsv", &GroupByAgeWrapper,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

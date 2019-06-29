@@ -21,6 +21,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"head"};
   return GenericTestMain(args, "reverse_list.cc", "reverse_list.tsv",
-                         &ReverseList, DefaultComparator{}, param_names,
-                         nullptr);
+                         &ReverseList, DefaultComparator{}, param_names);
 }

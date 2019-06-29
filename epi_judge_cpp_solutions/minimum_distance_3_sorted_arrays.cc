@@ -47,6 +47,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args {argv + 1, argv + argc};
   std::vector<std::string> param_names {"sorted_arrays"};
   return GenericTestMain(args, "minimum_distance_3_sorted_arrays.cc", "minimum_distance_3_sorted_arrays.tsv", &FindClosestElementsInSortedArrays, 
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }
 // clang-format on

@@ -55,5 +55,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"prices"};
   return GenericTestMain(args, "buy_and_sell_stock_twice.cc",
                          "buy_and_sell_stock_twice.tsv", &BuyAndSellStockTwice,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

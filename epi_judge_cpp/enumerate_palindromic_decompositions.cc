@@ -21,6 +21,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"text"};
   return GenericTestMain(args, "enumerate_palindromic_decompositions.cc",
                          "enumerate_palindromic_decompositions.tsv",
-                         &PalindromeDecompositions, &Comp, param_names,
-                         nullptr);
+                         &PalindromeDecompositions, &Comp, param_names);
 }

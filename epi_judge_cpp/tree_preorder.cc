@@ -12,6 +12,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"tree"};
   return GenericTestMain(args, "tree_preorder.cc", "tree_preorder.tsv",
-                         &PreorderTraversal, DefaultComparator{}, param_names,
-                         nullptr);
+                         &PreorderTraversal, DefaultComparator{}, param_names);
 }

@@ -75,5 +75,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"points"};
   return GenericTestMain(
       args, "line_through_most_points.cc", "line_through_most_points.tsv",
-      &FindLineWithMostPoints, DefaultComparator{}, param_names, nullptr);
+      &FindLineWithMostPoints, DefaultComparator{}, param_names);
 }

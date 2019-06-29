@@ -30,6 +30,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"buildings"};
   return GenericTestMain(args, "drawing_skyline.cc", "drawing_skyline.tsv",
-                         &ComputeSkyline, DefaultComparator{}, param_names,
-                         nullptr);
+                         &ComputeSkyline, DefaultComparator{}, param_names);
 }

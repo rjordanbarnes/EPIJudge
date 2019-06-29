@@ -41,6 +41,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"intervals"};
   return GenericTestMain(args, "minimum_points_covering_intervals.cc",
                          "minimum_points_covering_intervals.tsv",
-                         &FindMinimumVisits, DefaultComparator{}, param_names,
-                         nullptr);
+                         &FindMinimumVisits, DefaultComparator{}, param_names);
 }

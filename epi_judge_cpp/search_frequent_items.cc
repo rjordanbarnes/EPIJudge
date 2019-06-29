@@ -21,5 +21,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"k", "stream"};
   return GenericTestMain(
       args, "search_frequent_items.cc", "search_frequent_items.tsv",
-      &SearchFrequentItemsWrapper, UnorderedComparator{}, param_names, nullptr);
+      &SearchFrequentItemsWrapper, UnorderedComparator{}, param_names);
 }

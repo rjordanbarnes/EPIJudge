@@ -13,5 +13,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "largest_rectangle_under_skyline.cc",
                          "largest_rectangle_under_skyline.tsv",
                          &CalculateLargestRectangle, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

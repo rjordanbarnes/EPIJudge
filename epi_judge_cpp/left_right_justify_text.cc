@@ -14,5 +14,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"words", "L"};
   return GenericTestMain(args, "left_right_justify_text.cc",
                          "left_right_justify_text.tsv", &JustifyText,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

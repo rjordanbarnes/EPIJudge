@@ -31,6 +31,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "l", "node_idx",
                                        "new_node_data"};
   return GenericTestMain(args, "insert_in_list.cc", "insert_in_list.tsv",
-                         &InsertListWrapper, DefaultComparator{}, param_names,
-                         nullptr);
+                         &InsertListWrapper, DefaultComparator{}, param_names);
 }

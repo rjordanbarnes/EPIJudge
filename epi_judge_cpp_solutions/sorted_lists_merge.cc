@@ -30,5 +30,5 @@ int main(int argc, char *argv[]) {
   std::vector<std::string> param_names{"L1", "L2"};
   return GenericTestMain(args, "sorted_lists_merge.cc",
                          "sorted_lists_merge.tsv", &MergeTwoSortedLists,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

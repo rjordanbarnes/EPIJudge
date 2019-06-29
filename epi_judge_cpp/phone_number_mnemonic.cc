@@ -13,5 +13,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"phone_number"};
   return GenericTestMain(args, "phone_number_mnemonic.cc",
                          "phone_number_mnemonic.tsv", &PhoneMnemonic,
-                         UnorderedComparator{}, param_names, nullptr);
+                         UnorderedComparator{}, param_names);
 }

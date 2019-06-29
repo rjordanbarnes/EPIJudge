@@ -58,5 +58,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"tree", "interval"};
   return GenericTestMain(args, "range_lookup_in_bst.cc",
                          "range_lookup_in_bst.tsv", &RangeLookupInBST,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

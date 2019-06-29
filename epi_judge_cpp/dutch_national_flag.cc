@@ -52,5 +52,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "A", "pivot_idx"};
   return GenericTestMain(args, "dutch_national_flag.cc",
                          "dutch_national_flag.tsv", &DutchFlagPartitionWrapper,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

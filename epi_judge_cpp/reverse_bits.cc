@@ -8,6 +8,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"x"};
   return GenericTestMain(args, "reverse_bits.cc", "reverse_bits.tsv",
-                         &ReverseBits, DefaultComparator{}, param_names,
-                         nullptr);
+                         &ReverseBits, DefaultComparator{}, param_names);
 }

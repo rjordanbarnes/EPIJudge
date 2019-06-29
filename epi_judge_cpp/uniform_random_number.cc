@@ -47,5 +47,5 @@ int main(int argc, char* argv[]) {
                                        "upper_bound"};
   return GenericTestMain(args, "uniform_random_number.cc",
                          "uniform_random_number.tsv", &UniformRandomWrapper,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

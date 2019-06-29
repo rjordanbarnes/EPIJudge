@@ -58,5 +58,5 @@ int main(int argc, char *argv[]) {
   std::vector<std::string> param_names{"regex", "s"};
   return GenericTestMain(args, "regular_expression.cc",
                          "regular_expression.tsv", &IsMatch,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

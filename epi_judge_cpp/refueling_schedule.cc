@@ -31,5 +31,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "gallons", "distances"};
   return GenericTestMain(args, "refueling_schedule.cc",
                          "refueling_schedule.tsv", &FindAmpleCityWrapper,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

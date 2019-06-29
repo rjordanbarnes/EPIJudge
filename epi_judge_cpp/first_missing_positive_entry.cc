@@ -14,5 +14,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "first_missing_positive_entry.cc",
                          "first_missing_positive_entry.tsv",
                          &FindFirstMissingPositive, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

@@ -12,5 +12,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "directory_path_normalization.cc",
                          "directory_path_normalization.tsv",
                          &ShortestEquivalentPath, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

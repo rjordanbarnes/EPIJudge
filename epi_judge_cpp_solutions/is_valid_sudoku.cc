@@ -62,6 +62,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"partial_assignment"};
   return GenericTestMain(args, "is_valid_sudoku.cc", "is_valid_sudoku.tsv",
-                         &IsValidSudoku, DefaultComparator{}, param_names,
-                         nullptr);
+                         &IsValidSudoku, DefaultComparator{}, param_names);
 }

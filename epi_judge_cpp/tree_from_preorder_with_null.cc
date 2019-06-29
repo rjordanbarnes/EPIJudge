@@ -35,5 +35,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "tree_from_preorder_with_null.cc",
                          "tree_from_preorder_with_null.tsv",
                          &ReconstructPreorderWrapper, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

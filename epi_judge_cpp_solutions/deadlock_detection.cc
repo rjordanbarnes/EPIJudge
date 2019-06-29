@@ -76,5 +76,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "num_nodes", "edges"};
   return GenericTestMain(args, "deadlock_detection.cc",
                          "deadlock_detection.tsv", &HasCycleWrapper,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

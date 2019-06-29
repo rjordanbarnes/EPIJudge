@@ -63,5 +63,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A"};
   return GenericTestMain(
       args, "search_for_missing_element.cc", "find_missing_and_duplicate.tsv",
-      &FindDuplicateMissing, DefaultComparator{}, param_names, nullptr);
+      &FindDuplicateMissing, DefaultComparator{}, param_names);
 }

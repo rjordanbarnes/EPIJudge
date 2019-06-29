@@ -41,6 +41,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args {argv + 1, argv + argc};
   std::vector<std::string> param_names {"input_set"};
   return GenericTestMain(args, "power_set.cc", "power_set.tsv", &GeneratePowerSet, 
-                         UnorderedComparator{}, param_names, nullptr);
+                         UnorderedComparator{}, param_names);
 }
 // clang-format on

@@ -118,6 +118,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"k", "edges"};
   return GenericTestMain(args, "graph_clone.cc", "graph_clone.tsv",
-                         &CloneGraphTest, DefaultComparator{}, param_names,
-                         nullptr);
+                         &CloneGraphTest, DefaultComparator{}, param_names);
 }

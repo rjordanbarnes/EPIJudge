@@ -40,5 +40,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"symbols"};
   return GenericTestMain(args, "huffman_coding.cc", "huffman_coding.tsv",
                          &HuffmanEncodingWrapper, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

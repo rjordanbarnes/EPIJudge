@@ -14,5 +14,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "minimum_distance_3_sorted_arrays.cc",
                          "minimum_distance_3_sorted_arrays.tsv",
                          &FindClosestElementsInSortedArrays,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

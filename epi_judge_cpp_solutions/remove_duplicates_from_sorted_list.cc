@@ -24,6 +24,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"L"};
   return GenericTestMain(args, "remove_duplicates_from_sorted_list.cc",
                          "remove_duplicates_from_sorted_list.tsv",
-                         &RemoveDuplicates, DefaultComparator{}, param_names,
-                         nullptr);
+                         &RemoveDuplicates, DefaultComparator{}, param_names);
 }

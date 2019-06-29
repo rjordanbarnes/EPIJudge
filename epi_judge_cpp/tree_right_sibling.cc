@@ -47,5 +47,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "tree"};
   return GenericTestMain(
       args, "tree_right_sibling.cc", "tree_right_sibling.tsv",
-      &ConstructRightSiblingWrapper, DefaultComparator{}, param_names, nullptr);
+      &ConstructRightSiblingWrapper, DefaultComparator{}, param_names);
 }

@@ -14,5 +14,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"L", "k"};
   return GenericTestMain(
       args, "list_cyclic_right_shift.cc", "list_cyclic_right_shift.tsv",
-      &CyclicallyRightShiftList, DefaultComparator{}, param_names, nullptr);
+      &CyclicallyRightShiftList, DefaultComparator{}, param_names);
 }

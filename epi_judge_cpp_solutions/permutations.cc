@@ -37,6 +37,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args {argv + 1, argv + argc};
   std::vector<std::string> param_names {"A"};
   return GenericTestMain(args, "permutations.cc", "permutations.tsv", &Permutations, 
-                         UnorderedComparator{}, param_names, nullptr);
+                         UnorderedComparator{}, param_names);
 }
 // clang-format on

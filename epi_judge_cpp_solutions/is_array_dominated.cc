@@ -65,5 +65,5 @@ int main(int argc, char* argv[]) {
                                        "expected_01", "expected_10"};
   return GenericTestMain(args, "is_array_dominated.cc",
                          "is_array_dominated.tsv", &ValidPlacementExistsWrapper,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

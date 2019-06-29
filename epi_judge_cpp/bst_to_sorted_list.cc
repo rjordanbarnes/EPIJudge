@@ -34,5 +34,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "tree"};
   return GenericTestMain(
       args, "bst_to_sorted_list.cc", "bst_to_sorted_list.tsv",
-      &BSTToDoublyLinkedListWrapper, DefaultComparator{}, param_names, nullptr);
+      &BSTToDoublyLinkedListWrapper, DefaultComparator{}, param_names);
 }

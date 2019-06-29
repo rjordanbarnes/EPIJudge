@@ -12,5 +12,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "sort_increasing_decreasing_array.cc",
                          "sort_increasing_decreasing_array.tsv",
                          &SortKIncreasingDecreasingArray, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

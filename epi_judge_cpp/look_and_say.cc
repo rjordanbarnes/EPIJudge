@@ -11,6 +11,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"n"};
   return GenericTestMain(args, "look_and_say.cc", "look_and_say.tsv",
-                         &LookAndSay, DefaultComparator{}, param_names,
-                         nullptr);
+                         &LookAndSay, DefaultComparator{}, param_names);
 }

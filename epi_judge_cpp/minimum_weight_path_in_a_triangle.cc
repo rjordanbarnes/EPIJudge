@@ -12,6 +12,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"triangle"};
   return GenericTestMain(args, "minimum_weight_path_in_a_triangle.cc",
                          "minimum_weight_path_in_a_triangle.tsv",
-                         &MinimumPathWeight, DefaultComparator{}, param_names,
-                         nullptr);
+                         &MinimumPathWeight, DefaultComparator{}, param_names);
 }

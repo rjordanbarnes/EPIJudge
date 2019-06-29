@@ -35,5 +35,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "tree"};
   return GenericTestMain(args, "tree_connect_leaves.cc",
                          "tree_connect_leaves.tsv", &CreateListOfLeavesWrapper,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

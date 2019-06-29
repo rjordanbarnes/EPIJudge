@@ -15,5 +15,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "longest_substring_with_matching_parentheses.cc",
                          "longest_substring_with_matching_parentheses.tsv",
                          &LongestMatchingParentheses, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

@@ -78,8 +78,7 @@ bool IsAnyPlacementFeasibleWrapper(TimedExecutor& executor, int k,
 int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"executor", "k", "edges"};
-  return GenericTestMain(args, "is_circuit_wirable.cc",
-                         "is_circuit_wirable.tsv",
-                         &IsAnyPlacementFeasibleWrapper, DefaultComparator{},
-                         param_names, nullptr);
+  return GenericTestMain(
+      args, "is_circuit_wirable.cc", "is_circuit_wirable.tsv",
+      &IsAnyPlacementFeasibleWrapper, DefaultComparator{}, param_names);
 }

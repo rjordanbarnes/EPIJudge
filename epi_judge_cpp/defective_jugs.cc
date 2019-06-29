@@ -24,6 +24,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"jugs", "L", "H"};
   return GenericTestMain(args, "defective_jugs.cc", "defective_jugs.tsv",
-                         &CheckFeasible, DefaultComparator{}, param_names,
-                         nullptr);
+                         &CheckFeasible, DefaultComparator{}, param_names);
 }

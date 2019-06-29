@@ -56,5 +56,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A", "w"};
   return GenericTestMain(args, "max_of_sliding_window.cc",
                          "max_of_sliding_window.tsv", &CalculateTrafficVolumes,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

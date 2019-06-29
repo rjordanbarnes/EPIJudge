@@ -29,5 +29,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "head", "node_idx"};
   return GenericTestMain(args, "delete_from_list.cc", "delete_from_list.tsv",
                          &DeleteFromListWrapper, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

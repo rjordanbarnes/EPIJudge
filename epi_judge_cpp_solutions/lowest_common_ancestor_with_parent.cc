@@ -59,5 +59,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "tree", "key0", "key1"};
   return GenericTestMain(args, "lowest_common_ancestor_with_parent.cc",
                          "lowest_common_ancestor.tsv", &LcaWrapper,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

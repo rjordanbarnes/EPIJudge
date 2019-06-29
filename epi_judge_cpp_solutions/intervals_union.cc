@@ -109,5 +109,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "intervals"};
   return GenericTestMain(args, "intervals_union.cc", "intervals_union.tsv",
                          &UnionOfIntervalsWrapper, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

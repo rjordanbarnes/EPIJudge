@@ -16,6 +16,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"A"};
   return GenericTestMain(args, "rook_attack.cc", "rook_attack.tsv",
-                         &RookAttackWrapper, DefaultComparator{}, param_names,
-                         nullptr);
+                         &RookAttackWrapper, DefaultComparator{}, param_names);
 }

@@ -58,5 +58,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A"};
   return GenericTestMain(args, "search_for_min_max_in_array.cc",
                          "search_for_min_max_in_array.tsv", &FindMinMax,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

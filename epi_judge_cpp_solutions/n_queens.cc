@@ -51,5 +51,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"n"};
   return GenericTestMain(args, "n_queens.cc", "n_queens.tsv", &NQueens,
-                         UnorderedComparator{}, param_names, nullptr);
+                         UnorderedComparator{}, param_names);
 }

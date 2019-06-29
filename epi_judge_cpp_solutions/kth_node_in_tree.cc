@@ -83,5 +83,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"tree", "k"};
   return GenericTestMain(args, "kth_node_in_tree.cc", "kth_node_in_tree.tsv",
                          &FindKthNodeBinaryTreeWrapper, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

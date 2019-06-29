@@ -85,6 +85,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"H", "P", "n"};
   return GenericTestMain(args, "road_network.cc", "road_network.tsv",
-                         &FindBestProposals, DefaultComparator{}, param_names,
-                         nullptr);
+                         &FindBestProposals, DefaultComparator{}, param_names);
 }

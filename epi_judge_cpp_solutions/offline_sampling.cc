@@ -64,5 +64,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "k", "A"};
   return GenericTestMain(args, "offline_sampling.cc", "offline_sampling.tsv",
                          &RandomSamplingWrapper, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

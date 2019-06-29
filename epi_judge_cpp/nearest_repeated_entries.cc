@@ -14,5 +14,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"paragraph"};
   return GenericTestMain(args, "nearest_repeated_entries.cc",
                          "nearest_repeated_entries.tsv", &FindNearestRepetition,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

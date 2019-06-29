@@ -65,6 +65,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"executor", "x", "y", "image"};
   return GenericTestMain(args, "matrix_connected_regions.cc", "painting.tsv",
-                         &FlipColorWrapper, DefaultComparator{}, param_names,
-                         nullptr);
+                         &FlipColorWrapper, DefaultComparator{}, param_names);
 }

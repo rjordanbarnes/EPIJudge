@@ -14,5 +14,5 @@ int main(int argc, char* argv[]) {
   return GenericTestMain(args, "number_of_score_combinations.cc",
                          "number_of_score_combinations.tsv",
                          &NumCombinationsForFinalScore, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

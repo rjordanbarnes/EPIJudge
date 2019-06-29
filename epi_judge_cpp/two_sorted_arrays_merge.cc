@@ -17,5 +17,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"A", "m", "B", "n"};
   return GenericTestMain(
       args, "two_sorted_arrays_merge.cc", "two_sorted_arrays_merge.tsv",
-      &MergeTwoSortedArraysWrapper, DefaultComparator{}, param_names, nullptr);
+      &MergeTwoSortedArraysWrapper, DefaultComparator{}, param_names);
 }

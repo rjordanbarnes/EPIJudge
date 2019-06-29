@@ -65,6 +65,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"disjoint_intervals", "new_interval"};
   return GenericTestMain(args, "interval_add.cc", "interval_add.tsv",
-                         &AddInterval, DefaultComparator{}, param_names,
-                         nullptr);
+                         &AddInterval, DefaultComparator{}, param_names);
 }

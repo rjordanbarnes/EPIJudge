@@ -17,5 +17,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"sequence"};
   return GenericTestMain(args, "sunset_view.cc", "sunset_view.tsv",
                          &ExamineBuildingsWithSunsetWrapper,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

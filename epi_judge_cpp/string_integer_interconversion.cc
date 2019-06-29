@@ -26,5 +26,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"x", "s"};
   return GenericTestMain(args, "string_integer_interconversion.cc",
                          "string_integer_interconversion.tsv", &Wrapper,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

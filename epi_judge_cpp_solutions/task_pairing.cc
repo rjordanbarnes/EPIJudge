@@ -40,5 +40,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"task_durations"};
   return GenericTestMain(args, "task_pairing.cc", "task_pairing.tsv",
                          &OptimumTaskAssignment, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

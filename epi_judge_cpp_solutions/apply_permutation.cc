@@ -25,5 +25,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"perm", "A"};
   return GenericTestMain(args, "apply_permutation.cc", "apply_permutation.tsv",
                          &ApplyPermutationWrapper, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

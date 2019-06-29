@@ -52,6 +52,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args {argv + 1, argv + argc};
   std::vector<std::string> param_names {"s", "words"};
   return GenericTestMain(args, "string_decompositions_into_dictionary_words.cc", "string_decompositions_into_dictionary_words.tsv", &FindAllSubstrings, 
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }
 // clang-format on

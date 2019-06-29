@@ -11,5 +11,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"L"};
   return GenericTestMain(args, "is_list_palindromic.cc",
                          "is_list_palindromic.tsv", &IsLinkedListAPalindrome,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

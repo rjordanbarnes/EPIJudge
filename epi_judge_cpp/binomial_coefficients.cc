@@ -10,5 +10,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"n", "k"};
   return GenericTestMain(
       args, "binomial_coefficients.cc", "binomial_coefficients.tsv",
-      &ComputeBinomialCoefficient, DefaultComparator{}, param_names, nullptr);
+      &ComputeBinomialCoefficient, DefaultComparator{}, param_names);
 }

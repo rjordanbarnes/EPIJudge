@@ -95,5 +95,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"executor", "l"};
   return GenericTestMain(args, "copy_posting_list.cc", "copy_posting_list.tsv",
                          &CopyPostingsListWrapper, DefaultComparator{},
-                         param_names, nullptr);
+                         param_names);
 }

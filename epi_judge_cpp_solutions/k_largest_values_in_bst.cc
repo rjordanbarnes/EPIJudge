@@ -35,6 +35,6 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args {argv + 1, argv + argc};
   std::vector<std::string> param_names {"tree", "k"};
   return GenericTestMain(args, "k_largest_values_in_bst.cc", "k_largest_values_in_bst.tsv", &FindKLargestInBST, 
-                         UnorderedComparator{}, param_names, nullptr);
+                         UnorderedComparator{}, param_names);
 }
 // clang-format on

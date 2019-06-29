@@ -56,5 +56,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> param_names{"r1", "r2"};
   return GenericTestMain(args, "rectangle_intersection.cc",
                          "rectangle_intersection.tsv", &IntersectRectangle,
-                         DefaultComparator{}, param_names, nullptr);
+                         DefaultComparator{}, param_names);
 }

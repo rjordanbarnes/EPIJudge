@@ -123,6 +123,5 @@ int main(int argc, char* argv[]) {
   std::vector<std::string> args{argv + 1, argv + argc};
   std::vector<std::string> param_names{"executor", "maze", "s", "e"};
   return GenericTestMain(args, "search_maze.cc", "search_maze.tsv",
-                         &SearchMazeWrapper, DefaultComparator{}, param_names,
-                         nullptr);
+                         &SearchMazeWrapper, DefaultComparator{}, param_names);
 }
